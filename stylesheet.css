@@ -1,0 +1,12 @@
+h1 {
+  color: cornflowerblue;
+}
+
+#totalYen {
+    border-style: solid;
+    border-width: 2px;
+}
+
+#container1 {
+    text-align: center
+}

@@ -5,48 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tokyo Disneyland</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <div class="bigContainer">
-        <div class="container">
-            <div id="company">TOKYO DISNEYLAND</div>
-            <div id="totalYen">¥</div>
+        <div id="container1">
+            <div id="company"><h1>TOKYO DISNEYLAND</h1></div>
+            <div id="totalYen"><h2>合計 (TOTAL) ¥</h2></div>
         </div>
 
-        <div class="container">
-            <div id="tickets">
-                <button id="annual">年間パス | Annual Pass</button>
-                <button id="adult">大人 | Adult (18 years and up)</button>
-                <button id="teen">中人 | Teen (12-17 years old)</button>
-                <button id="child">小人 | Child (4-1 years old)</button>
-                <button id="senior">シニア | (65 years and up)</button>
+        <div id="container2">
+            <div id="ticketBox">
+                <button class="ticket">年間パス | Annual Pass</button>
+                <button class="ticket">大人 | Adult (18 years and up)</button>
+                <button class="ticket">中人 | Teen (12-17 years old)</button>
+                <button class="ticket">小人 | Child (4-1 years old)</button>
+                <button class="ticket">シニア | (65 years and up)</button>
             </div>
 
             <div id="calculator">
                 <div id="row1">
-                    <button id="seven">7</button>
-                    <button id="four">4</button>
-                    <button id="one">1</button>
-                    <button id="zero">0</button>
+                    <button class="num">7</button>
+                    <button class="num">4</button>
+                    <button class="num">1</button>
+                    <button class="num">0</button>
                 </div>
                 <div id="row2">
-                    <button id="eight">8</button>
-                    <button id="five">5</button>
-                    <button id="two">2</button>
-                    <button id="zero0">00</button>
+                    <button class="num">8</button>
+                    <button class="num">5</button>
+                    <button class="num">2</button>
+                    <button class="num">00</button>
                 </div>
                 <div id="row3">
-                    <button id="nine">9</button>
-                    <button id="six">6</button>
-                    <button id="three">3</button>
-                    <button id="dot">.</button>
+                    <button class="num">9</button>
+                    <button class="num">6</button>
+                    <button class="num">3</button>
+                    <button class="num">.</button>
                 </div>
                 <div id="row4">
-                    <button id="clear">Clear</button>
-                    <button id="balance">Get Balance</button>
-                    <button id="deposit">Deposit Cash</button>
-                    <button id="withdraw">Withdraw Cash</button>
-                    <button id="equal">=</button>
+                    <button class="func">Clear</button>
+                    <button class="func">Get Balance</button>
+                    <button class="func">Deposit Cash</button>
+                    <button class="func">Withdraw Cash</button>
+                    <button class="func">=</button>
                 </div>
                 <div id="row5"></div>
 
@@ -54,6 +55,7 @@
 
         </div>
     </div>
-    
+<script src="/js/calculator.js"></script> 
+<script src="/js/cash_register.js"></script>   
 </body>
 </html>
