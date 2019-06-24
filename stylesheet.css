@@ -1,42 +1,77 @@
 body {
-  background-color: cornflowerblue;
+  background-color: aliceblue;
 }
 
-h1 {
+img {
+  max-width: 15%;
+  height: auto;
+}
+
+#company {
   color: cornflowerblue;
   background-color: aliceblue;
+  font-family: 'Squada One', cursive;  
+  font-size: 70px;
+  
 }
 
 #totalYen {
-  margin: auto;
-  border-style: solid;
-  border-width: 2px;
-  width: 40%;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 30px;
+  margin: 3% 20% 3% 20%;
+  padding: 1%;
+  border: solid cornflowerblue;
+  border-width: 4px;
+  border-radius: 25px;
+  /* width: 90%; */
+  /* height: 60px; */
   background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #container1 {
   text-align: center
 }
 
+/* #container2 {
+  background-image: "https://backgroundcheckall.com/wp-content/uploads/2017/12/starfield-background-1.png";
+} */
+
 .box {
   box-sizing: border-box;
   width: 50%;
   float: left;
+  
 }
 
 #tixBtn {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  width: 30%;
+  /* width: 50%; */
+  margin: 0% 20% 0% 20%;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 .ticket {
-  font-size: 20px;
-
+  font-size: 25px;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 .calc {
-  font-size: 40px;
+  font-size: 25px;
+  width: 15%;
+  height: 70px;
+  margin-bottom: 4px;
+  /* border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid silver; */
+  font-weight: bold;
+  /* color: black;
+  background: aliceblue; */
+  font-family: 'Berkshire Swash', cursive;
 }
