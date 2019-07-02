@@ -62,16 +62,17 @@ calculator.getTotal = function(){
 calculator.saveMemory = function(){
     return memory = total;
 }
+calculator.depositCash = function(x){
+    return balance += x; //balance = balance + x
+}
 calculator.getBalance = function(){
     balance = memory;
     return balance;
 }
-calculator.depositCash = function(x){
-    return balance += x;
-}
 calculator.clear = function(){
     total = 0;
-    memory = 0;
+    // memory = 0;
+    firstNum = 0;
     return total, memory;
 }
 

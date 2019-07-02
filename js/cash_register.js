@@ -8,19 +8,6 @@ let firstNum = 0;
 let operation = '';
 let secondNum = 0;
 
-//do i need these?
-//  let btnSeven = document.querySelector('#calc-seven');
-//  let btnEight = document.querySelector('#calc-eight');
-//  let btnNine = document.querySelector('#calc-nine');
-//  let btnFour = document.querySelector('#calc-four');
-//  let btnFive = document.querySelector('#calc-five');
-//  let btnSix = document.querySelector('#calc-six');
-//  let btnOne = document.querySelector('#calc-one');
-//  let btnTwo = document.querySelector('#calc-two');
-//  let btnThree = document.querySelector('#calc-three');
-//  let btnZero = document.querySelector('#calc-zero');
-//  let btnDblZero = document.querySelector('#calc-dblZero');
-
  //declare variables for operators
  let calcOpBtns = document.querySelectorAll('.op');
 
@@ -55,6 +42,7 @@ function showNum(){
     }else if(firstNum && operation){
         secondNum = parseFloat(this.textContent);
     }
+    // priceDisplay.innerHTML = calcMod.getTotal();
 }
 
 // calcNumBtns.forEach(function(x) {
@@ -82,36 +70,60 @@ function doOps(){
     }
 }
 
-btnEqual.addEventListener('click', result)
-function result(){
-    if(operation === '+'){
-        priceDisplay.innerHTML = calcMod.add(secondNum)
-    }else if(operation === '-'){
-        priceDisplay.innerHTML = calcMod.subtract(secondNum)
-    }else if(operation === 'x'){
-        priceDisplay.innerHTML = calcMod.multiply(secondNum)
-    }else if(operation === '÷'){
-        priceDisplay.innerHTML = calcMod.divide(secondNum)
-    }
-}
 
-btnDecimal.addEventListener('click', showDecimal)
+//decimal to be entered only once
+// for (let i=0; i<btnDecimal.length; i++){
+    btnDecimal.addEventListener('click', showDecimal)
+//}
+
 function showDecimal(){
     if(this.id === 'calc-decimal' && priceDisplay.innerHTML.indexOf('.')!== -1){
 
     }else {
         priceDisplay.innerHTML += this.innerHTML;
     }
+} //this is not working :(
+
+
+//equal button
+btnEqual.addEventListener('click', result)
+function result(){
+    if(operation === '+'){
+        priceDisplay.innerHTML = calcMod.add(secondNum);
+        // priceDisplay.innerHTML = calcMod.getTotal();
+        // console.log(calcMod.saveMemory());
+        priceDisplay.innerHTML = calcMod.saveMemory();
+    }else if(operation === '-'){
+        priceDisplay.innerHTML = calcMod.subtract(secondNum);
+        // priceDisplay.innerHTML = calcMod.getTotal();
+        priceDisplay.innerHTML = calcMod.saveMemory();
+    }else if(operation === 'x'){
+        priceDisplay.innerHTML = calcMod.multiply(secondNum);
+        // priceDisplay.innerHTML = calcMod.getTotal();
+        priceDisplay.innerHTML = calcMod.saveMemory();
+    }else if(operation === '÷'){
+        priceDisplay.innerHTML = calcMod.divide(secondNum);
+        // priceDisplay.innerHTML = calcMod.getTotal();
+        priceDisplay.innerHTML = calcMod.saveMemory();
+    }
 }
+
+
 //function event listeners
 for(let y=0; y<calcFuncBtns.length; y++){
     calcFuncBtns[y].addEventListener('click', doFunc)
 }
 
 function doFunc(){
-    if(this.innerHTML === 'Clear'){
-        // console.log(calcMod.clear());
+    if(this.innerHTML === 'CL'){
+        console.log(calcMod.clear());
         priceDisplay.innerHTML = calcMod.clear();
         priceDisplay.innerHTML = '';
+    }else if(this.innerHTML === 'DEP'){
+        // let x = priceDisplay.innerHTML;
+        priceDisplay.innerHTML = calcMod.depositCash();
+    }else if(this.innerHTML === 'BAL'){
+        // let x = priceDisplay.innerHTML;
+        priceDisplay.innerHTML = calcMod.getBalance();
     }
 }
